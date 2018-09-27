@@ -7,19 +7,23 @@
 
 // -----------------------------------
 // Convert Function Goes Here
-    function convert{
+    function convert(){
         var dollar = document.getElementsByName("dollars")[0].value;
         var selectElement = document.getElementById('currency');
         var exchangeRate = selectElement.value;
         var index = selectElement.selectedIndex;
         var currency = selectElement.options[index].text;
+
+        updateExchange(dollar, exchangeRate, currency, index);
     }
 
 
 // -----------------------------------
 // Calculate Function Goes Here
     function calculate(dollar, exchangeRate){
+
         return dollar * exchangeRate;
+
     }
 
 // -----------------------------------
